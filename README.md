@@ -1,10 +1,29 @@
 # 📦 Monitor Backup WhatsApp
 
-> Sistema de monitoramento automático de backups em servidores Linux, desenvolvido em **Java 8 + Spring Boot 2.7.18**, empacotado como **WAR** para execução no **Apache Tomcat 9** e integrado à **WhatsApp Cloud API da Meta**.
+> Sistema de monitoramento automático de backups em servidores Linux, desenvolvido em \*\*Java 8 + Spring Boot 2.7.18\*\*, empacotado como \*\*WAR\*\* para execução no \*\*Apache Tomcat 9\*\* e integrado à \*\*WhatsApp Cloud API da Meta\*\*.
 
 O sistema verifica os backups configurados, identifica arquivos ausentes ou atrasados e envia um alerta consolidado pelo WhatsApp, reduzindo a necessidade de conferências manuais.
 
----
+[!\[Java](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)](https://www.java.com/)
+[!\[Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)](https://spring.io/projects/spring-boot)
+[!\[Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=flat-square\&logo=apachemaven\&logoColor=white)](https://maven.apache.org/)
+[!\[Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-9-F8DC75?style=flat-square\&logo=apachetomcat\&logoColor=black)](https://tomcat.apache.org/)
+[!\[Linux](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square\&logo=linux\&logoColor=black)](https://www.linux.org/)
+[!\[WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?style=flat-square\&logo=whatsapp\&logoColor=white)](https://developers.facebook.com/docs/whatsapp/cloud-api/)
+[!\[REST API](https://img.shields.io/badge/REST-API-005571?style=flat-square\&logo=fastapi\&logoColor=white)](https://en.wikipedia.org/wiki/REST)
+[!\[JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?style=flat-square\&logo=junit5\&logoColor=white)](https://junit.org/junit5/)
+[!\[Mockito](https://img.shields.io/badge/Mockito-Tests-78A641?style=flat-square)](https://site.mockito.org/)
+[!\[License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+
+\---
+
+## 📌 Sobre o projeto
+
+O **Monitor Backup WhatsApp** automatiza a conferência de backups em diretórios configurados de servidores Linux. O sistema identifica arquivos ausentes ou atrasados, classifica a situação de cada cliente e consolida os problemas em um alerta enviado pelo WhatsApp.
+
+A aplicação foi estruturada com Java e Spring Boot, com execução agendada, configuração por variáveis de ambiente, API REST e empacotamento WAR para implantação em Apache Tomcat 9.
+
+\---
 
 ## 🎯 Objetivo
 
@@ -12,63 +31,109 @@ Transformar uma rotina operacional de conferência de backups em um processo aut
 
 O sistema:
 
-1. verifica os diretórios configurados;
-2. identifica o backup válido mais recente;
-3. compara a idade do backup com o limite definido;
-4. classifica o cliente como `OK`, `ATRASADO` ou `SEM_BACKUP`;
-5. consolida os problemas em uma única mensagem;
-6. envia o alerta pelo WhatsApp;
-7. registra o estado do alerta diário para evitar duplicidade.
+1. Verifica os diretórios configurados;
+2. Identifica o backup válido mais recente;
+3. Compara a idade do backup com o limite definido;
+4. Classifica o cliente como `OK`, `ATRASADO` ou `SEM\_BACKUP`;
+5. Consolida os problemas em uma única mensagem;
+6. Envia o alerta pelo WhatsApp;
+7. Registra o estado do alerta diário para evitar duplicidade.
 
----
+\---
 
 ## ⭐ Principais funcionalidades
 
-- 🔎 Monitoramento automático de múltiplos clientes.
-- 📁 Leitura dos diretórios de backup do Linux.
-- 🎯 Filtro por padrão de arquivo (`glob`).
-- ⏱️ Limite de backup configurável.
-- 🟢 Status `OK`.
-- 🟠 Status `ATRASADO`.
-- 🔴 Status `SEM_BACKUP`.
-- 📱 Integração com WhatsApp Cloud API.
-- 📨 Alerta consolidado.
-- 🛑 Limite de uma tentativa de alerta por dia.
-- 💾 Persistência do estado do alerta.
-- 🔄 Continuidade após reinicialização.
-- 🌎 Fuso horário configurável.
-- 🌐 API REST para consulta e execução manual.
-- 🧪 Testes automatizados com JUnit e Mockito.
-- 🔐 Credenciais fora do código-fonte.
-- ⚙️ Clientes configuráveis por ambiente.
-- 📦 Empacotamento WAR para Tomcat 9.
+* 🔎 Monitoramento automático de múltiplos clientes;
+* 📁 Leitura dos diretórios de backup do Linux;
+* 🎯 Filtro por padrão de arquivo (`glob`);
+* ⏱️ Limite de backup configurável;
+* 🟢 Status `OK`;
+* 🟠 Status `ATRASADO`;
+* 🔴 Status `SEM\_BACKUP`;
+* 📱 Integração com WhatsApp Cloud API;
+* 📨 Alerta consolidado;
+* 🛑 Limite de uma tentativa de alerta por dia;
+* 💾 Persistência do estado do alerta;
+* 🔄 Continuidade após reinicialização;
+* 🌎 Fuso horário configurável;
+* 🌐 API REST para consulta e execução manual;
+* 🧪 Testes automatizados com JUnit e Mockito;
+* 🔐 Credenciais fora do código-fonte;
+* ⚙️ Clientes configuráveis por ambiente;
+* 📦 Empacotamento WAR para Tomcat 9.
 
----
+\---
 
-## 🧱 Tecnologias
+## 🧰 Tecnologias
 
-| Tecnologia | Uso |
-|---|---|
-| Java 8 | Linguagem/runtime |
-| Spring Boot 2.7.18 | Framework |
-| Spring Web | API REST |
-| Spring Scheduler | Execução automática |
-| Maven | Build e dependências |
-| Apache Tomcat 9 | Servidor de aplicação |
-| WhatsApp Cloud API | Alertas |
-| JUnit 5 | Testes |
-| Mockito | Mocks |
-| Linux | Ambiente operacional |
+[!\[Java](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)](https://www.java.com/)
+[!\[Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)](https://spring.io/projects/spring-boot)
+[!\[Spring Web](https://img.shields.io/badge/Spring%20Web-REST%20API-6DB33F?style=flat-square\&logo=spring\&logoColor=white)](https://spring.io/)
+[!\[Maven](https://img.shields.io/badge/Maven-Dependencies-C71A36?style=flat-square\&logo=apachemaven\&logoColor=white)](https://maven.apache.org/)
+[!\[Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-9-F8DC75?style=flat-square\&logo=apachetomcat\&logoColor=black)](https://tomcat.apache.org/)
+[!\[WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?style=flat-square\&logo=whatsapp\&logoColor=white)](https://developers.facebook.com/docs/whatsapp/cloud-api/)
+[!\[JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?style=flat-square\&logo=junit5\&logoColor=white)](https://junit.org/junit5/)
+[!\[Mockito](https://img.shields.io/badge/Mockito-Testing-78A641?style=flat-square)](https://site.mockito.org/)
+[!\[Linux](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square\&logo=linux\&logoColor=black)](https://www.linux.org/)
+
+|Tecnologia|Utilização|
+|-|-|
+|Java 8|Linguagem e runtime|
+|Spring Boot 2.7.18|Framework da aplicação|
+|Spring Web|API REST|
+|Spring Scheduler|Execução automática|
+|Maven|Build e dependências|
+|Apache Tomcat 9|Servidor de aplicação|
+|WhatsApp Cloud API|Envio de alertas|
+|JUnit 5|Testes automatizados|
+|Mockito|Simulação de dependências nos testes|
+|Linux|Ambiente operacional|
 
 ### Compatibilidade
 
 O projeto permanece em Java 8 por compatibilidade com ambientes legados.
 
-Por utilizar Spring Boot 2.7.x e `javax.*`, o WAR deve ser executado em Tomcat 9.x.
+Por utilizar Spring Boot 2.7.x e APIs `javax.\*`, o WAR é destinado ao Apache Tomcat 9.x.
 
----
+\---
 
-# 📂 Estrutura do projeto
+## 🏗️ Arquitetura
+
+```text
+                 ┌──────────────────────┐
+                 │      Scheduler       │
+                 │     Spring Boot      │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │ BackupScannerService │
+                 │ Diretórios de backup │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │    MonitorService    │
+                 │ OK / ATRASADO /      │
+                 │ SEM\_BACKUP           │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │  AlertStateService   │
+                 │   1 alerta por dia   │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │   WhatsAppService    │
+                 │   Cloud API da Meta │
+                 └──────────────────────┘
+```
+
+\---
+
+## 📂 Estrutura do projeto
 
 ```text
 monitor-backup-whatsapp/
@@ -76,7 +141,6 @@ monitor-backup-whatsapp/
 ├── README.md
 ├── monitor-backup.env.example
 ├── pom.xml
-│
 └── src/
     ├── main/
     │   ├── java/
@@ -86,10 +150,8 @@ monitor-backup-whatsapp/
     │   │       ├── controller/
     │   │       ├── model/
     │   │       └── service/
-    │   │
     │   └── resources/
     │       └── application.properties
-    │
     └── test/
         └── java/
             └── br/com/monitorbackup/
@@ -101,43 +163,39 @@ monitor-backup-whatsapp/
 
 A organização segue o padrão Maven/Spring Boot e separa configuração, API, modelos, regras de negócio, integração externa e testes.
 
----
+\---
 
-# 🔐 Segurança
+## 🔐 Segurança e configuração
 
-## A chave da API não fica no projeto
+### 🔑 Credenciais da API
 
 O token do WhatsApp deve ser fornecido por variável de ambiente:
 
 ```bash
-WHATSAPP_TOKEN='SEU_ACCESS_TOKEN'
+WHATSAPP\_TOKEN='SEU\_ACCESS\_TOKEN'
 ```
 
 Também são configurados por ambiente:
 
 ```text
-WHATSAPP_PHONE_NUMBER_ID
-WHATSAPP_TO
-WHATSAPP_GRAPH_VERSION
-WHATSAPP_MESSAGE_MODE
-WHATSAPP_TEMPLATE_NAME
-WHATSAPP_TEMPLATE_LANGUAGE
+WHATSAPP\_PHONE\_NUMBER\_ID
+WHATSAPP\_TO
+WHATSAPP\_GRAPH\_VERSION
+WHATSAPP\_MESSAGE\_MODE
+WHATSAPP\_TEMPLATE\_NAME
+WHATSAPP\_TEMPLATE\_LANGUAGE
 ```
 
 Nunca coloque credenciais reais no código, no `application.properties` versionado ou no GitHub.
 
 O arquivo `monitor-backup.env.example` contém somente placeholders.
 
----
+### ⚙️ Configuração dos clientes
 
-# ⚙️ Configuração dos clientes
-
-Os clientes não ficam definidos no código Java.
-
-Use:
+Os clientes não ficam definidos diretamente no código Java. A configuração utiliza:
 
 ```bash
-MONITOR_CLIENTS='nome-do-cliente:padrao-do-backup'
+MONITOR\_CLIENTS='nome-do-cliente:padrao-do-backup'
 ```
 
 Formato:
@@ -149,44 +207,44 @@ nome-do-cliente:padrao-do-backup
 Exemplo genérico:
 
 ```text
-cliente-a:*_0_L0
+cliente-a:\*\_0\_L0
 ```
 
 O projeto não contém nomes de clientes, servidores ou dados operacionais reais.
 
----
+\---
 
-# ⏱️ Regra de monitoramento
+## ⏱️ Regra de monitoramento
 
-Por padrão:
+Configuração padrão:
 
 ```text
-menos de 24 horas → OK
+Menos de 24 horas → OK
 24 horas ou mais  → ATRASADO
-nenhum arquivo    → SEM_BACKUP
+Nenhum arquivo    → SEM\_BACKUP
 ```
 
-O limite pode ser alterado por:
+O limite pode ser alterado por variável de ambiente:
 
 ```bash
-MONITOR_LIMIT_HOURS=24
+MONITOR\_LIMIT\_HOURS=24
 ```
 
----
+\---
 
-# 📱 Alertas pelo WhatsApp
+## 📱 Alertas pelo WhatsApp
 
-Quando existem problemas, o sistema consolida os clientes em uma única mensagem.
+Quando existem problemas, o sistema consolida os clientes afetados em uma única mensagem.
 
-O envio utiliza a WhatsApp Cloud API da Meta e pode trabalhar com texto ou template, conforme a configuração do ambiente.
+O envio utiliza a **WhatsApp Cloud API da Meta** e pode trabalhar com texto ou template, conforme a configuração do ambiente e as regras aplicáveis à API.
 
----
+\---
 
-# 🛑 Controle de uma mensagem por dia
+## 🛑 Controle de alerta diário
 
-O Scheduler pode executar várias vezes durante o dia, mas o sistema mantém o estado do alerta em arquivo.
+O Scheduler pode executar várias vezes ao longo do dia, mas o sistema mantém o estado do alerta em arquivo.
 
-Fluxo:
+Fluxo simplificado:
 
 ```text
 Monitoramento
@@ -212,55 +270,55 @@ Existem problemas?
    Fim
 ```
 
-O estado é registrado antes da chamada externa para evitar duplicidade.
+O estado é registrado antes da chamada externa para ajudar a evitar duplicidade de tentativas no mesmo dia.
 
----
+\---
 
-# 🔄 Agendamento automático
+## 🔄 Agendamento automático
 
-Por padrão:
+Configuração padrão:
 
-```text
-intervalo: 30 minutos
-primeira execução: 1 minuto após a inicialização
-```
+|Parâmetro|Valor|
+|-|-|
+|Intervalo|30 minutos|
+|Primeira execução|1 minuto após a inicialização|
 
-Configuração:
+Variáveis de configuração:
 
 ```bash
-MONITOR_INTERVAL_MS=1800000
-MONITOR_INITIAL_DELAY_MS=60000
+MONITOR\_INTERVAL\_MS=1800000
+MONITOR\_INITIAL\_DELAY\_MS=60000
 ```
 
----
+\---
 
-# 🌐 API REST
+## 🌐 API REST
 
-### Health Check
+### ❤️ Health Check
 
 ```http
 GET /api/health
 ```
 
-### Consultar todos os clientes
+### 📊 Consultar todos os clientes
 
 ```http
 GET /api/status
 ```
 
-### Consultar um cliente
+### 🔎 Consultar um cliente
 
 ```http
 GET /api/status/{cliente}
 ```
 
-### Executar monitoramento manual
+### ▶️ Executar monitoramento manual
 
 ```http
 POST /api/monitorar
 ```
 
-### Testar WhatsApp
+### 📱 Testar integração com WhatsApp
 
 ```http
 POST /api/teste-whatsapp
@@ -268,66 +326,60 @@ POST /api/teste-whatsapp
 
 > Em produção, recomenda-se proteger os endpoints com autenticação, firewall, proxy reverso ou outra camada de controle de acesso.
 
----
+\---
 
-# 🧪 Testes
+## 🧪 Testes automatizados
 
-O projeto possui testes para:
+O projeto possui testes para os seguintes serviços:
 
 ### `BackupScannerServiceTest`
 
-- identificação do backup;
-- filtro por padrão;
-- cálculo de idade;
-- status `OK`;
-- status `ATRASADO`;
-- status `SEM_BACKUP`.
+* Identificação do backup;
+* Filtro por padrão;
+* Cálculo de idade;
+* Status `OK`;
+* Status `ATRASADO`;
+* Status `SEM\_BACKUP`.
 
 ### `AlertStateServiceTest`
 
-- persistência do estado;
-- leitura após restart;
-- controle diário.
+* Persistência do estado;
+* Leitura após reinicialização;
+* Controle diário.
 
 ### `MonitorServiceTest`
 
-- consolidação dos problemas;
-- envio de uma única mensagem;
-- bloqueio de segunda mensagem no mesmo dia.
+* Consolidação dos problemas;
+* Envio de uma única mensagem;
+* Bloqueio de uma segunda tentativa no mesmo dia.
 
-Executar:
+Execute os testes com:
 
 ```bash
 mvn clean test
 ```
 
----
+\---
 
-# 🏗️ Build
+## 🏗️ Build
 
-Gerar o WAR:
+Para gerar o WAR:
 
 ```bash
 mvn clean package
 ```
 
-Resultado:
+Artefato esperado:
 
 ```text
 target/monitor-backup-whatsapp.war
 ```
 
----
+\---
 
-# 🚀 Deploy no Tomcat 9
+## 🚀 Deploy no Apache Tomcat 9
 
-Copie o WAR para:
-
-```text
-$CATALINA_BASE/webapps/
-```
-
-Exemplo:
+Copie o WAR para o diretório de aplicações:
 
 ```bash
 cp target/monitor-backup-whatsapp.war /opt/tomcat/webapps/
@@ -335,119 +387,90 @@ cp target/monitor-backup-whatsapp.war /opt/tomcat/webapps/
 
 Configure as variáveis de ambiente usando `monitor-backup.env.example` como referência.
 
-Depois reinicie o Tomcat e acompanhe os logs:
+Depois, reinicie o Tomcat e acompanhe os logs:
 
 ```bash
 tail -f /opt/tomcat/logs/catalina.out
 ```
 
----
+Confirme o caminho de instalação, as permissões e a configuração do serviço antes de realizar o deploy.
 
-# 🔒 Boas práticas de produção
+\---
 
-- Não versionar tokens.
-- Não colocar `.env` real no Git.
-- Não registrar headers HTTP nos logs.
-- Não expor a API diretamente à Internet.
-- Restringir permissões do diretório de estado.
-- Executar o Tomcat com usuário sem privilégios administrativos.
-- Utilizar HTTPS quando a API estiver exposta.
-- Monitorar os logs do Tomcat.
-- Planejar migração futura de Java 8 para Java 17+.
+## 🛡️ Boas práticas de produção
 
----
+* 🔐 Não versionar tokens ou credenciais;
+* 🚫 Não publicar arquivos `.env` reais no Git;
+* 🧾 Não registrar cabeçalhos HTTP sensíveis nos logs;
+* 🔒 Não expor a API diretamente à Internet sem proteção;
+* 📁 Restringir as permissões do diretório de estado;
+* 👤 Executar o Tomcat com usuário sem privilégios administrativos;
+* 🌐 Utilizar HTTPS quando a API estiver exposta;
+* 📊 Monitorar os logs do Tomcat;
+* ⬆️ Planejar uma migração futura de Java 8 para uma versão mais recente.
 
-# 🧩 Arquitetura
+\---
 
-```text
-                 ┌──────────────────────┐
-                 │      Scheduler       │
-                 │    Spring Boot       │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ BackupScannerService │
-                 │                      │
-                 │ Diretórios de backup │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │    MonitorService    │
-                 │                      │
-                 │ OK / ATRASADO /      │
-                 │ SEM_BACKUP           │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ AlertStateService    │
-                 │                      │
-                 │ 1 alerta por dia     │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │  WhatsAppService     │
-                 │                      │
-                 │ Cloud API Meta       │
-                 └──────────────────────┘
-```
+## 💡 O que este projeto demonstra
 
----
-
-# 💡 O que este projeto demonstra
-
-- Java;
-- Spring Boot;
-- API REST;
-- integração com API externa;
-- automação;
-- Scheduler;
-- Linux;
-- sistema de arquivos;
-- monitoramento;
-- tratamento de exceções;
-- persistência de estado;
-- configuração por ambiente;
-- segurança de credenciais;
-- Maven;
-- Tomcat;
-- testes automatizados.
+* ☕ Java;
+* ⚙️ Spring Boot;
+* 🌐 API REST;
+* 🔗 Integração com API externa;
+* 🤖 Automação e Scheduler;
+* 🐧 Linux e sistema de arquivos;
+* 🔎 Monitoramento de backups;
+* 🧯 Tratamento de exceções;
+* 💾 Persistência de estado;
+* 🔐 Segurança de credenciais;
+* 📦 Maven e empacotamento WAR;
+* 🐱 Apache Tomcat;
+* 🧪 Testes automatizados.
 
 O projeto foi desenvolvido para apoiar uma rotina operacional de monitoramento de backups, automação e alertas em ambientes Linux.
 
----
+\---
 
-# 🚧 Melhorias futuras
+## 🚧 Melhorias futuras
 
-- Autenticação da API.
-- Dashboard web.
-- Histórico de disponibilidade.
-- Banco PostgreSQL para histórico.
-- Cadastro de clientes via banco.
-- Logs estruturados.
-- Métricas e observabilidade.
-- Prometheus/Grafana.
-- Docker.
-- CI/CD.
-- HTTPS com Nginx.
-- Retry controlado da integração externa.
-- Suporte a múltiplos canais de alerta.
-- Migração para Java 17+.
-- Spring Boot atual.
-- Testes de integração.
-- Controle de usuários e permissões.
+* 🔐 Autenticação da API;
+* 📊 Dashboard web;
+* 📈 Histórico de disponibilidade;
+* 🗄️ Banco PostgreSQL para histórico;
+* 👥 Cadastro de clientes via banco;
+* 🧾 Logs estruturados;
+* 📡 Métricas e observabilidade;
+* 📊 Integração com Prometheus/Grafana;
+* 🐳 Docker;
+* 🔄 CI/CD;
+* 🌐 HTTPS com Nginx;
+* 🔁 Retry controlado da integração externa;
+* 📣 Suporte a múltiplos canais de alerta;
+* ⬆️ Migração para Java 17+ e uma versão mais recente do Spring Boot;
+* 🧪 Testes de integração;
+* 👤 Controle de usuários e permissões.
 
----
+\---
 
-# ⭐ Apoie o projeto
+## \### 👨‍💻 Autor
+
+## 
+
+## \*\*Matheus Marks\*\*
+
+## 
+
+Projeto desenvolvido por iniciativa própria para auxiliar uma rotina operacional real, automatizando o monitoramento de backups em servidores Linux e o envio de alertas pelo WhatsApp. A solução foi criada para facilitar o acompanhamento dos backups, identificar arquivos ausentes ou atrasados e reduzir a necessidade de verificações manuais no dia a dia do serviço. O projeto está em constante evolução, com melhorias e ajustes baseados nas necessidades operacionais.
+
+\---
+
+## ⭐ Apoie o projeto
 
 Se este projeto foi útil para você, considere deixar uma ⭐ no repositório.
 
----
+\---
 
 ## 📄 Licença
 
-Projeto desenvolvido para apoiar uma rotina operacional de monitoramento de backups, automação e alertas em ambientes Linux.
+Consulte o arquivo [`LICENSE`](LICENSE) para verificar os termos de uso e distribuição deste projeto.
+
