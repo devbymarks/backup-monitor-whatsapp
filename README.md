@@ -1,6 +1,6 @@
 # 📦 Monitor Backup WhatsApp
 
-> Sistema de monitoramento automático de backups em servidores Linux, desenvolvido em \*\*Java 8 + Spring Boot 2.7.18\*\*, empacotado como \*\*WAR\*\* para execução no \*\*Apache Tomcat 9\*\* e integrado à \*\*WhatsApp Cloud API da Meta\*\*.
+> Sistema de monitoramento automático de backups em servidores Linux, desenvolvido em Java 8 + Spring Boot 2.7.18, empacotado como WAR para execução no Apache Tomcat 9 e integrado à WhatsApp Cloud API da Meta.
 
 O sistema verifica os backups configurados, identifica arquivos ausentes ou atrasados e envia um alerta consolidado pelo WhatsApp, reduzindo a necessidade de conferências manuais.
 
@@ -15,7 +15,7 @@ O sistema verifica os backups configurados, identifica arquivos ausentes ou atra
 [![Mockito](https://img.shields.io/badge/Mockito-Tests-78A641?style=flat-square)](https://site.mockito.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-\---
+---
 
 ## 📌 Sobre o projeto
 
@@ -23,7 +23,7 @@ O **Monitor Backup WhatsApp** automatiza a conferência de backups em diretório
 
 A aplicação foi estruturada com Java e Spring Boot, com execução agendada, configuração por variáveis de ambiente, API REST e empacotamento WAR para implantação em Apache Tomcat 9.
 
-\---
+---
 
 ## 🎯 Objetivo
 
@@ -39,7 +39,7 @@ O sistema:
 6. Envia o alerta pelo WhatsApp;
 7. Registra o estado do alerta diário para evitar duplicidade.
 
-\---
+---
 
 ## ⭐ Principais funcionalidades
 
@@ -62,19 +62,19 @@ O sistema:
 * ⚙️ Clientes configuráveis por ambiente;
 * 📦 Empacotamento WAR para Tomcat 9.
 
-\---
+---
 
 ## 🧰 Tecnologias
 
-[!\[Java](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)](https://www.java.com/)
-[!\[Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)](https://spring.io/projects/spring-boot)
-[!\[Spring Web](https://img.shields.io/badge/Spring%20Web-REST%20API-6DB33F?style=flat-square\&logo=spring\&logoColor=white)](https://spring.io/)
-[!\[Maven](https://img.shields.io/badge/Maven-Dependencies-C71A36?style=flat-square\&logo=apachemaven\&logoColor=white)](https://maven.apache.org/)
-[!\[Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-9-F8DC75?style=flat-square\&logo=apachetomcat\&logoColor=black)](https://tomcat.apache.org/)
-[!\[WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?style=flat-square\&logo=whatsapp\&logoColor=white)](https://developers.facebook.com/docs/whatsapp/cloud-api/)
-[!\[JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?style=flat-square\&logo=junit5\&logoColor=white)](https://junit.org/junit5/)
-[!\[Mockito](https://img.shields.io/badge/Mockito-Testing-78A641?style=flat-square)](https://site.mockito.org/)
-[!\[Linux](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square\&logo=linux\&logoColor=black)](https://www.linux.org/)
+[![Java](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Spring Web](https://img.shields.io/badge/Spring%20Web-REST%20API-6DB33F?style=flat-square\&logo=spring\&logoColor=white)](https://spring.io/)
+[![Maven](https://img.shields.io/badge/Maven-Dependencies-C71A36?style=flat-square\&logo=apachemaven\&logoColor=white)](https://maven.apache.org/)
+[![Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-9-F8DC75?style=flat-square\&logo=apachetomcat\&logoColor=black)](https://tomcat.apache.org/)
+[![WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?style=flat-square\&logo=whatsapp\&logoColor=white)](https://developers.facebook.com/docs/whatsapp/cloud-api/)
+[![JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?style=flat-square\&logo=junit5\&logoColor=white)](https://junit.org/junit5/)
+[![Mockito](https://img.shields.io/badge/Mockito-Testing-78A641?style=flat-square)](https://site.mockito.org/)
+[![Linux](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square\&logo=linux\&logoColor=black)](https://www.linux.org/)
 
 |Tecnologia|Utilização|
 |-|-|
@@ -95,7 +95,7 @@ O projeto permanece em Java 8 por compatibilidade com ambientes legados.
 
 Por utilizar Spring Boot 2.7.x e APIs `javax.\*`, o WAR é destinado ao Apache Tomcat 9.x.
 
-\---
+---
 
 ## 🏗️ Arquitetura
 
@@ -131,7 +131,7 @@ Por utilizar Spring Boot 2.7.x e APIs `javax.\*`, o WAR é destinado ao Apache T
                  └──────────────────────┘
 ```
 
-\---
+---
 
 ## 📂 Estrutura do projeto
 
@@ -163,7 +163,7 @@ monitor-backup-whatsapp/
 
 A organização segue o padrão Maven/Spring Boot e separa configuração, API, modelos, regras de negócio, integração externa e testes.
 
-\---
+---
 
 ## 🔐 Segurança e configuração
 
@@ -212,7 +212,7 @@ cliente-a:\*\_0\_L0
 
 O projeto não contém nomes de clientes, servidores ou dados operacionais reais.
 
-\---
+---
 
 ## ⏱️ Regra de monitoramento
 
@@ -230,7 +230,7 @@ O limite pode ser alterado por variável de ambiente:
 MONITOR\_LIMIT\_HOURS=24
 ```
 
-\---
+---
 
 ## 📱 Alertas pelo WhatsApp
 
@@ -238,7 +238,7 @@ Quando existem problemas, o sistema consolida os clientes afetados em uma única
 
 O envio utiliza a **WhatsApp Cloud API da Meta** e pode trabalhar com texto ou template, conforme a configuração do ambiente e as regras aplicáveis à API.
 
-\---
+---
 
 ## 🛑 Controle de alerta diário
 
@@ -272,7 +272,7 @@ Existem problemas?
 
 O estado é registrado antes da chamada externa para ajudar a evitar duplicidade de tentativas no mesmo dia.
 
-\---
+---
 
 ## 🔄 Agendamento automático
 
@@ -290,7 +290,7 @@ MONITOR\_INTERVAL\_MS=1800000
 MONITOR\_INITIAL\_DELAY\_MS=60000
 ```
 
-\---
+---
 
 ## 🌐 API REST
 
@@ -326,7 +326,7 @@ POST /api/teste-whatsapp
 
 > Em produção, recomenda-se proteger os endpoints com autenticação, firewall, proxy reverso ou outra camada de controle de acesso.
 
-\---
+---
 
 ## 🧪 Testes automatizados
 
@@ -359,7 +359,7 @@ Execute os testes com:
 mvn clean test
 ```
 
-\---
+---
 
 ## 🏗️ Build
 
@@ -375,7 +375,7 @@ Artefato esperado:
 target/monitor-backup-whatsapp.war
 ```
 
-\---
+---
 
 ## 🚀 Deploy no Apache Tomcat 9
 
@@ -395,7 +395,7 @@ tail -f /opt/tomcat/logs/catalina.out
 
 Confirme o caminho de instalação, as permissões e a configuração do serviço antes de realizar o deploy.
 
-\---
+---
 
 ## 🛡️ Boas práticas de produção
 
@@ -409,7 +409,7 @@ Confirme o caminho de instalação, as permissões e a configuração do serviç
 * 📊 Monitorar os logs do Tomcat;
 * ⬆️ Planejar uma migração futura de Java 8 para uma versão mais recente.
 
-\---
+---
 
 ## 💡 O que este projeto demonstra
 
@@ -429,7 +429,7 @@ Confirme o caminho de instalação, as permissões e a configuração do serviç
 
 O projeto foi desenvolvido para apoiar uma rotina operacional de monitoramento de backups, automação e alertas em ambientes Linux.
 
-\---
+---
 
 ## 🚧 Melhorias futuras
 
@@ -450,25 +450,21 @@ O projeto foi desenvolvido para apoiar uma rotina operacional de monitoramento d
 * 🧪 Testes de integração;
 * 👤 Controle de usuários e permissões.
 
-\---
+---
 
-## \### 👨‍💻 Autor
-
-## 
-
-## \*\*Matheus Marks\*\*
-
-## 
-
+### 👨‍💻 Autor
+ 
+Matheus Marks
+ 
 Projeto desenvolvido por iniciativa própria para auxiliar uma rotina operacional real, automatizando o monitoramento de backups em servidores Linux e o envio de alertas pelo WhatsApp. A solução foi criada para facilitar o acompanhamento dos backups, identificar arquivos ausentes ou atrasados e reduzir a necessidade de verificações manuais no dia a dia do serviço. O projeto está em constante evolução, com melhorias e ajustes baseados nas necessidades operacionais.
 
-\---
+---
 
 ## ⭐ Apoie o projeto
 
 Se este projeto foi útil para você, considere deixar uma ⭐ no repositório.
 
-\---
+---
 
 ## 📄 Licença
 
