@@ -4,16 +4,16 @@
 
 O sistema verifica os backups configurados, identifica arquivos ausentes ou atrasados e envia um alerta consolidado pelo WhatsApp, reduzindo a necessidade de conferências manuais.
 
-[!\[Java](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)](https://www.java.com/)
-[!\[Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)](https://spring.io/projects/spring-boot)
-[!\[Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=flat-square\&logo=apachemaven\&logoColor=white)](https://maven.apache.org/)
-[!\[Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-9-F8DC75?style=flat-square\&logo=apachetomcat\&logoColor=black)](https://tomcat.apache.org/)
-[!\[Linux](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square\&logo=linux\&logoColor=black)](https://www.linux.org/)
-[!\[WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?style=flat-square\&logo=whatsapp\&logoColor=white)](https://developers.facebook.com/docs/whatsapp/cloud-api/)
-[!\[REST API](https://img.shields.io/badge/REST-API-005571?style=flat-square\&logo=fastapi\&logoColor=white)](https://en.wikipedia.org/wiki/REST)
-[!\[JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?style=flat-square\&logo=junit5\&logoColor=white)](https://junit.org/junit5/)
-[!\[Mockito](https://img.shields.io/badge/Mockito-Tests-78A641?style=flat-square)](https://site.mockito.org/)
-[!\[License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+[![Java](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square\&logo=openjdk\&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=flat-square\&logo=apachemaven\&logoColor=white)](https://maven.apache.org/)
+[![Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-9-F8DC75?style=flat-square\&logo=apachetomcat\&logoColor=black)](https://tomcat.apache.org/)
+[![Linux](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square\&logo=linux\&logoColor=black)](https://www.linux.org/)
+[![WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?style=flat-square\&logo=whatsapp\&logoColor=white)](https://developers.facebook.com/docs/whatsapp/cloud-api/)
+[![REST API](https://img.shields.io/badge/REST-API-005571?style=flat-square\&logo=fastapi\&logoColor=white)](https://en.wikipedia.org/wiki/REST)
+[![JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?style=flat-square\&logo=junit5\&logoColor=white)](https://junit.org/junit5/)
+[![Mockito](https://img.shields.io/badge/Mockito-Tests-78A641?style=flat-square)](https://site.mockito.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
 \---
 
